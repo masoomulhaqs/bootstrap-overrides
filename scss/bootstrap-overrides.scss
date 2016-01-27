@@ -29,6 +29,14 @@ a{
 	@extend %alink;
 }
 
+.text-light{
+	font-weight: 300;
+}
+
+.text-bold{
+	font-weight: 700;
+}
+
 .text-large{
 	font-size: 30px;
 }
