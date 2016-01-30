@@ -5,17 +5,21 @@
   "authors": [
     "Masoom Ulhaq S"
   ],
-  "description": "a simple css which overrides bootsrap styles and helps to improve our css",
+  "description": "a simple css which overrides bootsrap styles to help improve your css",
   "main": "",
   "moduleType": [],
   "license": "MIT",
   "ignore": [
     "**/.*",
+    ".sass-cache",
     "node_modules",
     "bower_components",
     "test",
     "tests",
     "scss",
     "config.rb"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
 }
