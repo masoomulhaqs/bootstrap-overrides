@@ -1,5 +1,6 @@
 {
   "name": "bootstrap-overrides",
+  "version": "v1.0",
   "homepage": "https://github.com/masoomulhaqs/bootstrap-overrides",
   "authors": [
     "Masoom Ulhaq S"
@@ -13,6 +14,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "scss",
+    "config.rb"
   ]
 }
