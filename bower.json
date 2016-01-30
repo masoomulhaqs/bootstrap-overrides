@@ -1,11 +1,11 @@
 {
   "name": "bootstrap-overrides",
-  "version": "v1.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/masoomulhaqs/bootstrap-overrides",
   "authors": [
     "Masoom Ulhaq S"
   ],
-  "description": "a simple css which overrides bootsrap styles and helps are improve our css",
+  "description": "a simple css which overrides bootsrap styles and helps to improve our css",
   "main": "",
   "moduleType": [],
   "license": "MIT",
