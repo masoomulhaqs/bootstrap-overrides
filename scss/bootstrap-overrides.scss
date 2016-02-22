@@ -95,6 +95,14 @@ input{
 		color: #fff;
 		border-radius: 0;
 	}
+	&.panel-box{
+		&,
+		.panel-heading,
+		.panel-body,
+		.panel-footer{
+	    	border-radius: 0;
+		}	
+	}
 }
 
 .table{
@@ -113,10 +121,16 @@ input{
 }
 
 .margin-right{
-	margin-right: 6px;
+	margin-right: 5px;
 }
 .margin-top-10{
 	margin-top: 10px;
+}
+.margin-bottom-10{
+	margin-bottom: 10px;
+}
+.margin-top-15{
+	margin-top: 15px;
 }
 .margin-bottom-15{
 	margin-bottom: 15px;
@@ -143,4 +157,16 @@ input{
 }
 .padding-bottom-30{
 	padding-bottom: 30px; 
+}
+.overflow-150 {
+  height: 150px;
+  overflow: auto;
+}
+.overflow-170 {
+  height: 170px;
+  overflow: auto;
+}
+.overflow-200 {
+  height: 200px;
+  overflow: auto;
 }

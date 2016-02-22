@@ -87,6 +87,12 @@ input:-webkit-autofill {
   color: #fff;
   border-radius: 0;
 }
+.panel.panel-box,
+.panel.panel-box .panel-heading,
+.panel.panel-box .panel-body,
+.panel.panel-box .panel-footer {
+  border-radius: 0;
+}
 
 .table.without-white-space {
   white-space: nowrap;
@@ -100,11 +106,19 @@ input:-webkit-autofill {
 }
 
 .margin-right {
-  margin-right: 6px;
+  margin-right: 5px;
 }
 
 .margin-top-10 {
   margin-top: 10px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
 }
 
 .margin-bottom-15 {
@@ -137,4 +151,19 @@ input:-webkit-autofill {
 
 .padding-bottom-30 {
   padding-bottom: 30px;
+}
+
+.overflow-150 {
+  height: 150px;
+  overflow: auto;
+}
+
+.overflow-170 {
+  height: 170px;
+  overflow: auto;
+}
+
+.overflow-200 {
+  height: 200px;
+  overflow: auto;
 }
