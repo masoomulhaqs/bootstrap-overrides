@@ -1,5 +1,41 @@
+@import "compass";
+@import "breakpoint";
+
+/*** DEFAULTS & MIXINS ***/
 $brandblue: #0066B3;
 $brandblue2: #006CA2;
+
+$positions: top right bottom left;
+
+@mixin setBoxModelPositions($property: margin){
+	@for $i from 1 through 6 {
+		@each $position in $positions{
+			.#{$property}-#{$position}-#{$i*5} { 
+				#{$property}-#{$position}: $i*5+px; 
+			}
+		}
+	}
+}
+
+@mixin setOverflow($min: 100, $max: 300){
+	@for $val from $min through $max{
+		@if($val%50 == 0){
+			.overflow-#{$val} {
+				height: $val+px;
+				overflow: auto;
+			}
+		}
+	}
+}
+
+body{
+	&.has-fixed-top{
+		padding-top: 55px;
+		@include breakpoint(max-width 767px){
+			padding-top: 105px;
+		}
+	}
+}
 
 img{
 	max-width: 100%;
@@ -27,16 +63,20 @@ a{
 		pointer-events: none;
 	}
 	@extend %alink;
+	&:focus{
+		outline: 0;
+	}
 }
 
 .text-light{
 	font-weight: 300;
 }
-
+.text-regular{
+	font-weight: 400;
+}
 .text-bold{
 	font-weight: 700;
 }
-
 .text-large{
 	font-size: 30px;
 }
@@ -56,6 +96,59 @@ a{
 	color: inherit !important;
 }
 
+.break-word{
+	white-space: normal;
+	word-break: break-all;
+}
+
+.content-group{
+	margin-bottom: 30px;
+}
+
+.navbar-fixed{
+	&.navbar-nav{
+		text-align: center;
+		>li{
+			@include breakpoint(max-width 768px){
+				display: inline-block;
+			}
+		}
+	}
+	&.navbar-header{
+		.navbar-brand{
+			@include breakpoint(max-width 768px){
+				float: none;
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.navbar-cyan{
+	$textcolor: #fff;
+	$texthovercolor: #B6E4E0;
+	$bgcolor: #41A299;
+	background: $bgcolor;
+	border-bottom: 5px solid rgba(0,0,0,0.3);
+	.navbar-brand{
+		color: $textcolor;
+		&:focus, &:hover{
+			color: $texthovercolor;
+		}
+	}
+	.navbar-nav{
+		>li{
+			>a{
+				color: $texthovercolor;
+				&:focus, &:hover{
+					color: $textcolor;
+				}
+			}
+		}
+	}
+}
+
 .btn{
 	&:hover, &:focus, &:active, &:active:focus{
 		outline: none;
@@ -65,7 +158,6 @@ a{
 	fieldset[disabled] &{
 		opacity: .9;
 	}
-
 }
 
 input{
@@ -96,12 +188,13 @@ input{
 		border-radius: 0;
 	}
 	&.panel-box{
+		@include box-shadow(0 3px 4px #ccc);
 		&,
 		.panel-heading,
 		.panel-body,
 		.panel-footer{
 	    	border-radius: 0;
-		}	
+		}
 	}
 }
 
@@ -120,21 +213,13 @@ input{
 	}
 }
 
-.margin-right{
-	margin-right: 5px;
-}
-.margin-top-10{
-	margin-top: 10px;
-}
-.margin-bottom-10{
-	margin-bottom: 10px;
-}
-.margin-top-15{
-	margin-top: 15px;
-}
-.margin-bottom-15{
-	margin-bottom: 15px;
-}
+@include setOverflow();
+
+/***** Margins & Paddings *****/
+
+@include setBoxModelPositions();
+@include setBoxModelPositions('padding');
+
 .no-p-margin{
 	p{
 		margin: 0;
@@ -146,27 +231,15 @@ input{
 .no-margin-top{
 	margin-top: 0;
 }
+.no-margin-bottom{
+	margin-bottom: 0;
+}
+.no-padding{
+	padding: 0;
+}
 .no-padding-top{
-	padding-top: 0 !important;
+	padding-top: 0;
 }
-.padding-bottom-20{
-	padding-bottom: 20px; 
-}
-.padding-bottom-25{
-	padding-bottom: 25px; 
-}
-.padding-bottom-30{
-	padding-bottom: 30px; 
-}
-.overflow-150 {
-  height: 150px;
-  overflow: auto;
-}
-.overflow-170 {
-  height: 170px;
-  overflow: auto;
-}
-.overflow-200 {
-  height: 200px;
-  overflow: auto;
+.no-padding-bottom{
+	padding-bottom: 0;
 }

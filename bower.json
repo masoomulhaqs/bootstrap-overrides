@@ -1,11 +1,11 @@
 {
   "name": "bootstrap-overrides",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "homepage": "https://github.com/masoomulhaqs/bootstrap-overrides",
   "authors": [
     "Masoom Ulhaq S"
   ],
-  "description": "a simple css which overrides bootsrap styles to help improve your css",
+  "description": "a simple css which overrides bootsrap styles to help improve your css and UI",
   "main": "",
   "moduleType": [],
   "license": "MIT",
@@ -17,7 +17,8 @@
     "test",
     "tests",
     "scss",
-    "config.rb"
+    "config.rb",
+    "gulpfile.js"
   ],
   "dependencies": {
     "bootstrap": "~3.3.6"
