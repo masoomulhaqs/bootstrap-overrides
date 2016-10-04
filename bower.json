@@ -18,7 +18,8 @@
     "tests",
     "scss",
     "config.rb",
-    "gulpfile.js"
+    "gulpfile.js",
+    "package.json"
   ],
   "dependencies": {
     "bootstrap": "~3.3.6"
